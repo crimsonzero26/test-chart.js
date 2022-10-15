@@ -1,0 +1,77 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  /* Shoutout to css-tricks */
+  /* https://css-tricks.com/perfect-full-page-background-image/ */
+  background: url(/static/images/wood.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#navbar-base {
+  padding: 0;
+}
+
+.row {
+  margin: 50px;
+  /* background-color: white; */
+}
+
+.col {
+  margin: 20px;
+  background-color: rgba(255, 253, 232);
+  border: 10px ridge #be8e26;
+}
+
+#map {
+  position: relative;
+  margin-left: 8%;
+  height: 700px;
+  width: 1000px;
+  border: 10px ridge #be8e26;
+}
+
+.chartBox{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:30px;
+  min-height: 200px
+}
+
+.chartBox .box{
+  position: relative;
+  background: rgba(255, 253, 253, 0.85);
+  padding:20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border-radius: 20px;
+}
+
+.chartLoneBox{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:30px;
+  min-height: 200px
+}
+
+.chartLoneBox .box{
+  position: relative;
+  background: rgba(255, 253, 253, 0.85);
+  padding:20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border-radius: 20px;
+}

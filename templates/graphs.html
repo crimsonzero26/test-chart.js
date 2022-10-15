@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Website-Visualization-Project</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+
+    <!-- BootStrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar Base -->
+  <div class="container" id="navbar-base">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <!-- GitHub Route -->
+        <a class="navbar-brand" href="https://github.com/Grimsbear/Visualization-Website-Project-3" target="_blank" id="navbrand">
+          <img src="/static/images/github_logo.png" alt="GitHub" width="30" height="30">Group 10</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Home Route -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href={{ url_for("IndexRoute") }}>Home</a>
+            </li>
+            <!-- DataSet Routes -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Datasets</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" target="_blank" href={{ url_for("CountriesRoute") }}>API</a></li>
+                <li><a class="dropdown-item" href={{ url_for("GraphsRoute") }}>Graphs</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://www.kaggle.com/datasets/mysarahmadbhat/alcohol-consumption">Alcohol Consumption</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://www.kaggle.com/datasets/pantanjali/unemployment-dataset">Unemployment</a></li>
+              </ul>
+            </li>
+            <!-- Map Route -->
+            <li class="nav-item">
+              <a class="nav-link active" href={{ url_for("MapRoute") }}>Map</a>
+            </li>
+          </ul>
+          <!-- Search Bar for API -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search for a Country..." aria-label="Search" id="data-search-bar">
+            <button class="btn btn-outline-success" type="button" id="data-search-button">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Body Elements -->
+  
+  <div class="chartLoneBox">
+    <div class="box">
+      <canvas id="beer"></canvas>
+    </div>
+  </div>
+
+  <div class="chartLoneBox">
+    <div class="box">
+      <canvas id="stacked"></canvas>
+    </div>
+  </div>
+
+  <div class="chartLoneBox">
+    <div class="box">
+      <canvas id="Alcohol"></canvas>
+    </div>
+  </div>
+
+  <div class="chartLoneBox">
+    <div class="box">
+      <canvas id="Combo"></canvas>
+    </div>
+  </div>
+
+  <div class="chartBox">
+    <div class="box">
+      <canvas id="World"></canvas>
+    </div>
+    <div class="box">
+      <canvas id="Percent"></canvas>
+    </div>
+  </div>
+
+
+  <script src="/static/js/searchbar.js"></script>
+  <script src="/static/js/graphs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
